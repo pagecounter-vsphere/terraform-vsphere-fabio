@@ -70,10 +70,19 @@ resource "vsphere_virtual_machine" "lb-vm" {
 }
 
 output "guest_ip_address" {
-  value = vsphere_virtual_machine.lb-vm.guest_ip_addresses
+  value = vsphere_virtual_machine.lb-vm.0.guest_ip_addresses
 }
 
 output "name" {
-  value = local.server_name
+  value = vsphere_virtual_machine.lb-vm.0.name
 }
+
+output "guest_ip_addresses" {
+  value = vsphere_virtual_machine.lb-vm.*.guest_ip_addresses
+}
+
+output "names" {
+  value = vsphere_virtual_machine.lb-vm.*.name
+}
+
 
