@@ -1,38 +1,41 @@
-variable "datastore_id" {
+variable datastore_id {
 }
 
-variable "dc" {
+variable dc {
   default = "dc1"
 }
 
-variable "domain" {
+variable domain {
 }
 
-variable "sub" {
+variable sub {
 }
 
-variable "folder" {
+variable folder {
 }
 
-variable "iface" {
+variable iface {
 }
 
-variable "network_id" {
+variable network_id {
 }
 
-variable "resource_pool_id" {
+variable resource_pool_id {
 }
 
-variable "template" {
+variable template {
 }
 
-variable "vsphere_datacenter_id" {
+variable vsphere_datacenter_id {
 }
 
-variable "consul_lan_join" {
+variable consul_lan_join {
   default = ""
 }
 
-variable "github_user" {
+variable github_user {
 }
 
+variable fabio_count {
+  default = 1
+}

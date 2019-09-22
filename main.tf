@@ -9,6 +9,7 @@ data "vsphere_virtual_machine" "template" {
 
 resource "vsphere_virtual_machine" "lb-vm" {
   name             = local.server_name
+  count            = var.fabio_count
   folder           = var.folder
   resource_pool_id = var.resource_pool_id
   datastore_id     = var.datastore_id
